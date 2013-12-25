@@ -61,16 +61,31 @@
 			        // console.log(json); //debug
 			        // var jsonData = json;
 			      	// var items = [];
-							$.each(json, function(count){
-							// addPersonToPage(json[count]);
-							});
+					$.each(json, function(count){
+					// addPersonToPage(json[count]);
+					});
+
+					var profileParam = getQueryVariable("profile");
+					// handles e.g. http://localhost:8888?profile=Kathleen
+					console.log(profileParam); //test
+
+					if (profileParam) {
+						var personJsonParam = $.grep(json, function(obj){
+							// console.log(JSON.stringify(obj))
+							// console.log(obj.name);
+					  		return obj.name == profileParam;
+					  	});
+						console.log(JSON.stringify(personJsonParam[0].name));
+						// addjQueryMobilePage("true",personJsonParam[0]);
+						// e.preventDefault();
+					};
 		        })
 			      .fail(function( jqxhr, textStatus, error ) {
 		          var err = textStatus + ", " + error;
 		          console.log( "Request Failed: " + err );
 		          alert('404 something went wrong. Please contact Dilys');
 		        });
-			      
+
 			function getQueryVariable(variable) { //jquery url
 			    var query = window.location.search.substring(1);
 			    var vars = query.split('&');
@@ -83,26 +98,7 @@
 			    console.log('Query variable %s not found', variable);
 			}
 
-			var profileParam = getQueryVariable("profile");
-			console.log(profileParam);
-			// if (profileParam) {
-			// 	var personJsonParam = $.grep(json, function(obj){
-			// 		// console.log(JSON.stringify(obj))
-			// 		// console.log(obj.name);
-			// 	  		return obj.name.split(" ")[0].toLowerCase() == profileParam;
-
-			//   	});
-			// 	console.log(JSON.stringify(personJsonParam[0].name));
-
-			// 	addjQueryMobilePage("true",personJsonParam[0]);
-			// 	window.location = "#"+profileParam+"";
-			// 	e.preventDefault();
-			// 	// $('.hide').hide();
-
-				
-			// 	// return;
-
-			// };
+			
 		});
 	</script>
 </body>
