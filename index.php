@@ -5,12 +5,17 @@
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="data.json"></script>
+	<!--<script src="http://cacpg.herokuapp.com/js/demos/snowfall.min.js"></script>-->
+	<script type="text/javascript" src="snowfall.min.js"></script>
 </head>
 <body>
+	<!-- static -->
 	<section class="box">
 		<div><h1>'Tis the Holiday Season . . .  </h1></div>
 		<img src="http://farm6.staticflickr.com/5489/11544209786_ae2d1b9500_h.jpg">
 	</section>
+
+
 	<section class="box">
 		<div><h1>Dear Kathleen</h1></div>
 		<div><h1>Merry Xmas!</h1></div>
@@ -39,6 +44,15 @@
 	<section class="box"></section>
 	<script type="text/javascript">
 		$(document).ready(function(){
+			snowFall.snow($("section"), {
+        minSize: 1,
+        maxSize: 8,
+        round: true,
+        minSpeed: 1,
+        maxSpeed: 3,
+        flakeCount: 120
+	    });
+
 			 $.getJSON( "data.json")
         .done(function( json ) {
 	        // console.log( "success" ); //debug
