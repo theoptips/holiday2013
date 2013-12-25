@@ -25,14 +25,14 @@
 	<section class="box"></section>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			// snowFall.snow($("section"), {
-	  //       minSize: 1,
-	  //       maxSize: 8,
-	  //       round: true,
-	  //       minSpeed: 1,
-	  //       maxSpeed: 3,
-	  //       flakeCount: 120
-		 //    });
+			snowFall.snow($("section"), {
+	        minSize: 1,
+	        maxSize: 8,
+	        round: true,
+	        minSpeed: 1,
+	        maxSpeed: 3,
+	        flakeCount: 120
+		    });
 
 
 
