@@ -16,10 +16,10 @@
 	</section>
 
 
-	<section class="box">
-		<div><h1>Dear Kathleen</h1></div>
-		<div><h1>Merry Xmas!</h1></div>
-		<img src="http://farm8.staticflickr.com/7421/11544448535_b9df2433a6_n.jpg">
+	<section class="box" id="profile_box">
+		<div><h1>Merry Xmas ! Dear</h1></div>
+		<!-- <div><h1></h1></div> -->
+		<!-- <img src="http://farm8.staticflickr.com/7421/11544448535_b9df2433a6_n.jpg"> -->
 	</section>
 	<section class="box">
 		<div><h1>Sushi was delicious!</h1></div>
@@ -79,7 +79,8 @@
 						console.log(JSON.stringify(personJsonParam[0].name)); //test
 						// addjQueryMobilePage("true",personJsonParam[0]);
 						// e.preventDefault();
-						appendImg(personJsonParam,"image_2","destination");
+						addNameToHeader(personJsonParam[0].name);
+						appendImg(personJsonParam,"profile_img_url","profile_box");
 					};
 		        })
 			      .fail(function( jqxhr, textStatus, error ) {
@@ -103,10 +104,19 @@
 			}
 
 			function appendImg(personJsonObj,imageName, destination){
-				console.log(JSON.stringify(personJsonObj[0].name + imageName));
-				// console.log(personJsonObj.name+imageName);
-				var selection = '#'+ destination;
-				$(selection).css('border','1px solid black');
+				var selection, personJsonObjFirstItem;
+				var img = $('<img>');
+				selection = '#'+ destination;
+				personJsonObjFirstItem = personJsonObj[0];
+				img.attr('src', personJsonObjFirstItem[imageName]);
+				$(selection).append(img);
+			}
+
+			function addNameToHeader(name){
+				var textTemp = $('#profile_box h1').text();
+				textTemp += ' ';
+				textTemp += name;
+				$('#profile_box h1').text(textTemp);
 			}
 
 			
