@@ -45,29 +45,52 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			snowFall.snow($("section"), {
-        minSize: 1,
-        maxSize: 8,
-        round: true,
-        minSpeed: 1,
-        maxSpeed: 3,
-        flakeCount: 120
-	    });
+	        minSize: 1,
+	        maxSize: 8,
+	        round: true,
+	        minSpeed: 1,
+	        maxSpeed: 3,
+	        flakeCount: 120
+		    });
+
+
 
 			 $.getJSON( "data.json")
-        .done(function( json ) {
-	        // console.log( "success" ); //debug
-	        // console.log(json); //debug
-	        // var jsonData = json;
-	      	// var items = [];
-					$.each(json, function(count){
-					// addPersonToPage(json[count]);
-					});
-        })
-	      .fail(function( jqxhr, textStatus, error ) {
-          var err = textStatus + ", " + error;
-          console.log( "Request Failed: " + err );
-          alert('404 something went wrong. Please contact Dilys');
-        });
+		        .done(function( json ) {
+			        // console.log( "success" ); //debug
+			        // console.log(json); //debug
+			        // var jsonData = json;
+			      	// var items = [];
+							$.each(json, function(count){
+							// addPersonToPage(json[count]);
+							});
+		        })
+			      .fail(function( jqxhr, textStatus, error ) {
+		          var err = textStatus + ", " + error;
+		          console.log( "Request Failed: " + err );
+		          alert('404 something went wrong. Please contact Dilys');
+		        });
+
+			var profileParam = getQueryVariable("profile");
+			console.log(profileParam);
+			// if (profileParam) {
+			// 	var personJsonParam = $.grep(json, function(obj){
+			// 		// console.log(JSON.stringify(obj))
+			// 		// console.log(obj.name);
+			// 	  		return obj.name.split(" ")[0].toLowerCase() == profileParam;
+
+			//   	});
+			// 	console.log(JSON.stringify(personJsonParam[0].name));
+
+			// 	addjQueryMobilePage("true",personJsonParam[0]);
+			// 	window.location = "#"+profileParam+"";
+			// 	e.preventDefault();
+			// 	// $('.hide').hide();
+
+				
+			// 	// return;
+
+			// };
 		});
 	</script>
 </body>
