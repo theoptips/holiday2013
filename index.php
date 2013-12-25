@@ -18,8 +18,6 @@
 
 	<section class="box" id="profile_box">
 		<div><h1>Merry Xmas ! Dear</h1></div>
-		<!-- <div><h1></h1></div> -->
-		<!-- <img src="http://farm8.staticflickr.com/7421/11544448535_b9df2433a6_n.jpg"> -->
 	</section>
 	<section class="box">
 		<div><h1>Sushi was delicious!</h1></div>
