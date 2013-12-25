@@ -19,16 +19,10 @@
 	<section class="box" id="profile_box">
 		<div><h1>Merry Xmas ! Dear</h1></div>
 	</section>
-	<section class="box" id="moment_2">
-		<img src="http://farm8.staticflickr.com/7331/11356775695_b6a97cfdf7_h.jpg">
-	</section>
-	<section class="box" id="moment_3">
-		<img src="http://farm4.staticflickr.com/3821/11544958656_8cabed668e_h.jpg">
-	</section>
-	<section class="box" id="message">
-	</section>
+	<section class="box" id="moment_2"></section>
+	<section class="box" id="moment_3"></section>
+	<section class="box" id="message"></section>
 	<section class="box"></section>
-	<div id="destination">test</div>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			// snowFall.snow($("section"), {
@@ -69,6 +63,8 @@
 						// combine to an add data function
 						addNameToHeader(personJsonParam[0].name);
 						appendImg(personJsonParam,"profile_img_url","profile_box");
+						appendImg(personJsonParam,"img_url_2","moment_2");
+						appendImg(personJsonParam,"img_url_3","moment_3");
 						prependHeader(personJsonParam,"img_caption_2","moment_2");
 						prependHeader(personJsonParam,"img_caption_3","moment_3");
 						appendMessage(personJsonParam);
