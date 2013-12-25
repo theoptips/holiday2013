@@ -20,24 +20,12 @@
 		<div><h1>Merry Xmas ! Dear</h1></div>
 	</section>
 	<section class="box" id="moment_2">
-		<!-- <div><h1>Sushi was delicious!</h1></div> -->
 		<img src="http://farm8.staticflickr.com/7331/11356775695_b6a97cfdf7_h.jpg">
 	</section>
 	<section class="box" id="moment_3">
-		<!-- <div><h1>Giraffes loved us!</h1></div> -->
 		<img src="http://farm4.staticflickr.com/3821/11544958656_8cabed668e_h.jpg">
 	</section>
 	<section class="box" id="message">
-<!-- 		<p>Another year raced by. Our journey together has been incredibly rich, 
-			though we have only met for a short while. Thank you for making a special
-			trip to San Francisco, and showing me a brand new San Diego. Each year, we
-			create so many memories, exchange so many emotional moments! I love it!
-			It's been an honor to be on this journey with you. Congratulations on completing
-			STEP exams. Congrats on making strides towards fulfilling a special dream
-			of becoming a doctor. Graduation is almost here. I wonder where would you choose to
-			complete your residency. Should it be the bay area. It would be absolutely
-			incredible! San Francisco loves you. xoxo
-		</p> -->
 	</section>
 	<section class="box"></section>
 	<div id="destination">test</div>
