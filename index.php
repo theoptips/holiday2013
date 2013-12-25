@@ -42,6 +42,7 @@
 		</p>
 	</section>
 	<section class="box"></section>
+	<div id="destination">test</div>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			snowFall.snow($("section"), {
@@ -71,13 +72,14 @@
 
 					if (profileParam) {
 						var personJsonParam = $.grep(json, function(obj){
-							// console.log(JSON.stringify(obj))
-							// console.log(obj.name);
+							// console.log(JSON.stringify(obj)) //test
+							// console.log(obj.name); //test
 					  		return obj.name == profileParam;
 					  	});
-						console.log(JSON.stringify(personJsonParam[0].name));
+						console.log(JSON.stringify(personJsonParam[0].name)); //test
 						// addjQueryMobilePage("true",personJsonParam[0]);
 						// e.preventDefault();
+						appendImg(personJsonParam,"image_2","destination");
 					};
 		        })
 			      .fail(function( jqxhr, textStatus, error ) {
@@ -86,6 +88,8 @@
 		          alert('404 something went wrong. Please contact Dilys');
 		        });
 
+
+			// params feature dependency
 			function getQueryVariable(variable) { //jquery url
 			    var query = window.location.search.substring(1);
 			    var vars = query.split('&');
@@ -96,6 +100,13 @@
 			        }
 			    }
 			    console.log('Query variable %s not found', variable);
+			}
+
+			function appendImg(personJsonObj,imageName, destination){
+				console.log(JSON.stringify(personJsonObj[0].name + imageName));
+				// console.log(personJsonObj.name+imageName);
+				var selection = '#'+ destination;
+				$(selection).css('border','1px solid black');
 			}
 
 			
